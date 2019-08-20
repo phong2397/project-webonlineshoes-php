@@ -1,0 +1,296 @@
+<?php
+	include("function/login.php");
+	include("function/customer_signup.php");
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Shoe Store</title>
+	<link rel="icon" href="img/logo.jpg" />
+	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/button.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/tab.js"></script>
+	<script src="js/tooltip.js"></script>
+	<script src="js/popover.js"></script>
+	<script src="js/collapse.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/scrollspy.js"></script>
+	<script src="js/alert.js"></script>
+	<script src="js/transition.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+/* MEGA MENU STYLE
+********************************/ 
+.mega-menu {
+	padding: 10px 0px ! important;
+	width: 100px;
+  border-radius: 0;
+  margin-top: 0px;
+	}
+
+	.mega-menu li {
+		display: inline-block;
+		float: left;
+		font-size: 0.94rem;
+		padding: 3px 0px;
+		}
+
+		.mega-menu li.mega-menu-column {
+
+			width: 50px;
+			}
+
+			.mega-menu .nav-header {
+			padding: 0 !important;
+			margin-bottom: 10px;
+			display: inline-block;
+			width: 50%;
+			border-bottom: 1px solid #ddd;
+			}
+      .mega-menu img { padding-bottom: 10px;}
+
+
+
+
+
+
+
+/* Disable Toggle style
+********************************/  
+
+/* Dropdown Toggle on style */
+.navbar .nav li.dropdown.open > .dropdown-toggle, 
+.navbar .nav li.dropdown.active > .dropdown-toggle, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background: inherit; /* Set to inherit when using mouse hover to open dropdown */
+    color: inherit;
+    }   
+    /* Toggle off style */
+    .navbar .nav li.dropdown.open.active > .dropdown-toggle,
+    .navbar .nav > li.dropdown > a:focus { 
+    background: inherit;
+    color: inherit;
+    }
+    /* Toggle hover */
+    .navbar .nav li.dropdown > .dropdown-toggle:hover,
+    .navbar .nav li.dropdown.open > .dropdown-toggle:hover {
+    background-color: #DDDDDD;
+    }
+            
+            
+    /* Toggle caret*/
+    .navbar .nav li.dropdown > .dropdown-toggle .caret {
+        border-bottom-color:;
+        border-top-color:;
+        }
+        /* Toggle caret hover */
+        .navbar .nav li.dropdown > a:hover .caret, 
+        .navbar .nav li.dropdown > a:focus .caret {
+        border-bottom-color: #333;
+        border-top-color: #333;
+        }
+        /* Toggle caret active */
+        .navbar .nav li.dropdown.open > .dropdown-toggle .caret, 
+        .navbar .nav li.dropdown.active > .dropdown-toggle .caret, 
+        .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+        border-bottom-color:#333;
+        border-top-color: #333;
+        }
+
+
+
+/* Hover style
+********************************/ 
+.navbar .nav > li > a, .mega-menu a
+ { 
+  -webkit-transition: all 200ms ease;
+	 -moz-transition: all 200ms ease;
+	  -ms-transition: all 200ms ease;
+	   -o-transition: all 200ms ease;
+	      transition: all 200ms ease; 
+	
+		 /* -webkit-transform: translate3d(0, 0, 0); Webkit Hardware Acceleration*/ 
+	     -webkit-backface-visibility: hidden; /* Safari Flicker Fix #2 */
+	     -webkit-transform: translateZ(0);
+}	
+</style>
+  <script>jQuery(document).ready(function(){
+    $(".dropdown").hover(
+        function() { $('.dropdown-menu', this).fadeIn("fast");
+        },
+        function() { $('.dropdown-menu', this).fadeOut("fast");
+    });
+});</script>
+<body>
+<header class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+		<div class="container">
+        
+            <!-- Mobile toggle button -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+
+            <!-- Logo -->
+  
+			
+            <!-- Navigation -->
+            <nav class="nav-collapse collapse">
+                <ul class="nav">
+                <img src="img/logo1.png" class="brand" style="width:40px">
+	
+				    <li><a href="home.php">Home</a></li>
+                    <li class="dropdown">
+                        <a href="product.php" class="dropdown-toggle" data-toggle="dropdown">Product<b class="caret"></b></a>                      
+
+						<ul class="dropdown-menu mega-menu">
+    
+						    <li class="mega-menu-column">
+						    <ul>
+						      
+						        <li><a href="runningnike.php">Nike</a></li>
+						        <li><a href="runningdas.php">Adidas</a></li>
+						        <li><a href="runningreebok.php">Reebok</a></li>
+						        <li><a href="runningconve.php">Converse</a></li>
+						        <li><a href="runningbitis.php">Biti's</a></li>
+						    </ul>
+						    </li>  
+							
+						</ul><!-- dropdown-menu -->
+						
+					</li><!-- /.dropdown -->
+			
+			
+                    <li><a href="aboutus.php">About Us</a></li>                                                                               
+                    <li><a href="contactus.php">Contact Us</a></li> 
+                    <li><a href="privacy.php">Privacy</a></li> 
+                    <li><a href="faqs.php">FAQS</a></li>                         
+					<div style="float: right">
+		<a href="#login"   data-toggle="modal" style="margin-left:10px"><i class="fa fa-lock"></i>Login</a>
+		<a href="#signup"   data-toggle="modal"><i class="fa fa-user"></i>Sign Up</a></div>
+		
+    </div><!-- /.nav-inner -->	
+				</ul><!-- /.nav -->           
+            </nav><!--/.nav-collapse -->
+                    
+		</div><!-- /.container -->
+	
+</header>
+
+	<div id="signup" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+					<h3 id="myModalLabel">Sign Up Here...</h3>
+				</div>
+					<div class="modal-body">
+						<center>
+					<form method="post">
+						<input type="text" name="firstname" placeholder="Firstname" required>
+						<input type="text" name="mi" placeholder="Middle Initial" maxlength="1" required>
+						<input type="text" name="lastname" placeholder="Lastname" required>
+						<input type="text" name="address" placeholder="Address" style="width:430px;"required>
+						<select name="country"  placeholder="Province" > 
+						<option value="country">Select country</option>
+<option value="TP HCM">TP HCM</option>
+<option value="Ha Noi">Ha Noi</option>
+<option value="Da Nang">Da Nang</option>
+<option value="Hoi An">Hoi An</option>
+<option value="Da Lat">Da Lat</option>
+<option value="Vinh Ha long">Vinh Ha long</option>
+<option value="Hue">Hue</option>
+<option value="Hoi An">Hoi An</option>
+<option value="Long An">Long An</option>
+<option value="Tay Ninh">Tay Ninh</option>
+</select>
+						<input type="text" name="zipcode" placeholder="ZIP Code" required maxlength="4">
+						<input type="text" name="mobile" placeholder="Mobile Number" maxlength="11">
+						<input type="text" name="telephone" placeholder="Telephone Number" maxlength="8">
+						<input type="email" name="email" placeholder="Email" required>
+						<input type="password" name="password" placeholder="Password" required>
+						</center>
+					</div>
+				<div class="modal-footer">
+					<input type="submit" class="btn btn-primary" name="signup" value="Sign Up">
+					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+				</div>
+					</form>
+			</div>
+
+	<br>
+<div id="container">
+	
+
+
+
+
+		<div id="content">
+			<legend><h3>Privacy Policy</h3></legend>
+				<p>The Online Shoe Store Incorporated respect the privacy of the visitors
+					to the Online Shoe Store.com website and the local websites connected with it, and take great care to protect your
+					information.. This privacy policy tells you what information we collect from you, how we may use it and
+					the steps we take to ensure that it is protected.
+				</p>
+			<hr>
+				<h4>Protection of visitors information</h4>
+					<p>In order to protect the information you provide to us by visiting our website we have implemented various
+						security measures. Your personal information is contained behind secured networks and is only accessible
+						by a limited number of people, who have special access rights and are required to keep the information
+						confidential.Please keep in mind though that whenever you give out personal information online there is a
+						risk that third parties may intercept and use that information. While Online Shoe Store strives to protect its user's
+						personal information and privacy, we cannot guarantee the security of any information you disclose online
+						and you do so at your own risk.</p>
+			<hr>
+				<h4>Use of cookies</h4>
+					<p>A cookie is a small string of information that the website that you visit transfers to your computer for
+						identification purposes. Cookies can be used to follow your activity on the website and that information
+						helps us to understand your preferences and improve your website experience. Cookies are also used to
+						remember for instance your user name and password.</p>
+					<p>You can turn off all cookies, in case you prefer not to receive them. You can also have your computer warn
+						you whenever cookies are being used. For both options you have to adjust your browser settings
+						(like internet explorer). There are also software products available that can manage cookies for you.
+						Please be aware though that when you have set your computer to reject cookies, it can limit the
+						functionality of the website you visit and it’s possible then that you do not have access to some of the
+						features on the website.</p>
+			<hr>
+				<h4>Online policy</h4>
+					<p>The Privacy Policy does not extend to anything that is inherent in the operation of the internet, and
+						therefore beyond adidas' control, and is not to be applied in any manner contrary to applicable law or
+						governmental regulation. This online privacy policy only applies to information collected through our
+						website and not to information collected offline.</p>
+
+		</div>
+	<br />
+</div>
+	<br />
+	<div id="footer">
+	<div class="foot">
+		
+		<p style="font-size:25px;">Online Shoe Store Inc. 2019 Brought To You </p>
+		<h4 >Hỗ trợ thanh toán</h4>
+          <div class="modcontent ">
+            <p><img alt="" src="img/logopayment.jpg"></p>
+			</div>
+	</div>
+
+		<div id="foot">
+		
+         
+          <h4 >FOLLOW US</h3>
+          <div class="modcontent ">
+            <p><a href="https://www.facebook.com"><img alt="" src="img/facebook.png"></a>&nbsp;&nbsp;<a href="https://www.instagram.com"><img alt="" src="img/instagram.png"></a>&nbsp;&nbsp;<a href="https://www.youtube.com"><img alt="" src="img/youtube.png"></a>&nbsp;&nbsp;<a href="https://www.lazada.vn"><img alt="" src="img/LZD1.png"></a>&nbsp;&nbsp;<a href="https://shopee.vn"><img alt="" src="img/Shopee.png" style="height:50px; width:50px"></a></p>
+          </div>
+       
+		</div>
+</div>
+</body>
+</html>
